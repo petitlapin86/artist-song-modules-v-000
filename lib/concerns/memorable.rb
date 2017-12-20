@@ -9,7 +9,7 @@ module Memorable
   def reset_all
   self.all.clear #can delete all artists
 end
-
+end 
 
 
 end
