@@ -1,8 +1,8 @@
 
      module Memorable
-       module ClassMethods # i am definining class methods 
+       module ClassMethods # i am definining class methods
          def reset_all
-           self.all.clear # both artist and song can delete everything 
+           self.all.clear # both artist and song can delete everything
          end
 
          def count
