@@ -1,7 +1,6 @@
-require 'pry'
+
 
 class Artist
-
   extend environment :: Memorable
   
   attr_accessor :name
