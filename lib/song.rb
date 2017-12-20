@@ -2,7 +2,7 @@
 
 class Song
   extend environment::Memorable
-  
+
   attr_accessor :name
   attr_reader :artist
 
