@@ -1,7 +1,7 @@
 
 
 class Song
-  extend Concerns::Memorable
+  extend Memorable::ClassMethods
 
   attr_accessor :name
   attr_reader :artist
