@@ -1,43 +1,40 @@
 require 'pry'
 
 class Artist
+
+  extend environment :: Memorable 
+  
   attr_accessor :name
   attr_reader :songs
 
-  @@artists = []
+  @@artists = [] #empty array of artists
 
   def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
+    @@artists.detect{|a| a.name == name} #can find an artist by name 
   end
 
   def initialize
-    @@artists << self
-    @songs = []
+    @@artists << self #adds itself to artist array 
+    @songs = [] #empty array of songs on initalization 
   end
 
   def self.all
-    @@artists
+    @@artists #knows about all artists 
   end
 
-  def self.reset_all
-    self.all.clear
-  end
 
-  def self.count
-    @@artists.count
-  end
 
   def add_song(song)
-    @songs << song
-    song.artist = self
+    @songs << song #take an argument of song and add to array 
+    song.artist = self #song has an artist
   end
 
-  def add_songs(songs)
-    songs.each { |song| add_song(song) }
+  def add_songs(songs) 
+    songs.each { |song| add_song(song) } #this im not sure about 
   end
 
   def to_param
-    name.downcase.gsub(' ', '-')
+    name.downcase.gsub(' ', '-') #convert song name to url friendly parameter
   end
 
 end
