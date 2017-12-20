@@ -1,4 +1,8 @@
 
+# in order to save time i can write some code that will be used by multiple classes in one place
+# note that we dont use self in modules 
+
+
      module Memorable
        module ClassMethods # i am definining class methods
          def reset_all
